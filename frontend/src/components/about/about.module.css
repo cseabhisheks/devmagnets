@@ -1,0 +1,61 @@
+.hero_section {
+    color: black;
+    background-color: rgb(101, 98, 119);
+    min-height: calc(100vh - 50px);
+    background-color: rgba(7, 13, 31, 255);
+
+}
+
+.hero_content {
+
+    padding: 23px;
+
+}
+
+.hero_content>* {
+    margin-top: 12px;
+}
+
+.hero_img {
+
+    display: flex;
+    justify-content: center;
+    padding: 23px;
+}
+
+.himg {
+    width: 40vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 2px 0px 20px 2px blueviolet;
+}
+
+.button {
+    background-color: blueviolet;
+    padding: 12px;
+    min-width: 50%;
+    border-radius: 20px;
+    border: 2px solid wheat;
+    box-shadow: inset 2px 0px 12px black, 8px 5px 20px 3px blueviolet;
+
+}
+
+@media screen and (min-width:768px) {
+    .hero_section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .hero_content {
+        /* width: 60%; */
+        max-width: 600px;
+    }
+
+    .himg {
+        max-width: 350px;
+    }
+}

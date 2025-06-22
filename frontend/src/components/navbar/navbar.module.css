@@ -1,0 +1,138 @@
+.socialmedia {
+    width: max-content;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: calc(100vw - 20px);
+    color: white;
+
+}
+
+.x {
+    position: fixed;
+    top: 40px;
+    right: 50px;
+    font-size: 25px;
+    color: blueviolet;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+
+}
+
+.hover:hover {
+    color: rgba(50, 93, 226, 255);
+}
+
+.icon {
+    font-size: 24px;
+    z-index: 2;
+    position: relative;
+    ;
+}
+
+
+.pages {
+    width: max-content;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.admin {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    align-items: center;
+    gap: 10px;
+}
+
+.abhi {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black
+}
+
+.menucontainer {
+    background: rgba(7, 13, 31, 255);
+    padding-left: 30px;
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: white;
+
+
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 32px;
+    height: 50px;
+    background-color: rgba(7, 13, 31, 255);
+    border-bottom: 2px solid gray;
+    /*it should be box shadow is not working*/
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+
+}
+
+.navformenu {
+    border: none;
+    background-color: transparent !important;
+
+}
+
+.menubar {
+    display: block;
+}
+
+.ownerdesktop {
+    display: none;
+}
+
+@media screen and (min-width:900px) {
+
+    .menucontainer {
+        flex-direction: row;
+        height: 50px;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        box-shadow: 2px 2px 2px gray;
+
+    }
+
+    .pages {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .admin {
+        display: none;
+    }
+
+    .menubar {
+        display: none;
+    }
+
+    .ownerdesktop {
+        display: block;
+    }
+
+
+}
