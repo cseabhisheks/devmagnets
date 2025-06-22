@@ -6,6 +6,9 @@ const cors = require('cors')
 app.use(cors())
 // app.use(bodyparser.json())
 app.use(express.json())
+app.get('/',(req,res)=>{
+    res.send("working")
+})
 app.post('/', (req, res) => {
 
     // Step 1: Create transporter
