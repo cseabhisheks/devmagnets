@@ -22,10 +22,12 @@
     gap: 22px;
     border: 2px solid rgb(255, 255, 255);
     box-shadow: 2px 2px 12px blueviolet;
-    border-radius: 19PX;
+    border-radius: 19px;
     
 }
-
+input{
+    background-color: white;
+}
 .form>* {
     height: 50px;
     border: 2px solid gray;
@@ -38,7 +40,7 @@
 .mess {
     height: 100px;
     resize: vertical;
-
+background-color: white;
 }
 
 

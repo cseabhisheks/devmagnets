@@ -38,14 +38,12 @@ app.post('/', (req, res) => {
     // Step 3: Send the email
     transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
-            console.error('Error:', err);
+            return res.json({ status: 'error', message: 'Email failed to send' });
         } else {
-            console.log('Email sent:', info.response);
+            return res.json({ status: 'ok', message: 'Email sent successfully' });
         }
     });
-    console.log(req.body.email)
+
     res.json({ status: 'ok', answer: req.body })
 })
-app.listen(3000, () => {
-    console.log("server is running on port 3000")
-})
+app.listen(3000)
