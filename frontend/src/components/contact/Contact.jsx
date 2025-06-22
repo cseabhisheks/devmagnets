@@ -1,11 +1,25 @@
 import style from './contact.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 export default function Contact() {
+    const [isemailed, setisemailed] = useState('')
     const formVariable = {
         email: '',
         name: '',
         subject: '',
         message: ''
+    }
+    useEffect(() => {
+
+        setTimeout(() => {
+            setisemailed('')
+        }, 3000)
+
+    }, [isemailed])
+
+    const isemailedtime = () => {
+        setTimeout(() => {
+            setisemailed('')
+        }, 3000)
     }
     const [form, setForm] = useState(formVariable)
 
@@ -20,7 +34,7 @@ export default function Contact() {
 
 
 
-    const submitform = async(e) => {
+    const submitform = async (e) => {
         e.preventDefault()
         const req = await fetch('https://devmagnets.onrender.com', {
             method: 'POST',
@@ -29,12 +43,13 @@ export default function Contact() {
                 'Content-Type': 'application/json'
             }
         })
-        if(req.ok){
-            const res=await req.json();
-            alert('message sent successfully!')
+        if (req.ok) {
+            const res = await req.json();
+            setisemailed("Message Sent Sucessfully")
+
         }
-        else{
-            alert('failed to send message')
+        else {
+            setisemailed('failed to send message')
         }
 
 
@@ -52,6 +67,7 @@ export default function Contact() {
                     <input className='fs-p' type="text" name="subject" placeholder='Subject' onChange={handleChange} />
                     <textarea className={`${style.mess} fs-p`} name="message" placeholder='Message' onChange={handleChange}></textarea>
                     <button className={`${style.button} fs-p`} type="submit">SUBMIT </button>
+                    {isemailed && <h1 className={style.notification}>{isemailed}</h1>       }
                 </form>
             </div>
 

@@ -7,7 +7,8 @@
     gap: 12px;
     border-top: 2px solid gray;
 }
-.formcontainer{
+
+.formcontainer {
     padding: 24px;
 }
 
@@ -23,11 +24,13 @@
     border: 2px solid rgb(255, 255, 255);
     box-shadow: 2px 2px 12px blueviolet;
     border-radius: 19px;
-    
+
 }
-input{
+
+input {
     background-color: white;
 }
+
 .form>* {
     height: 50px;
     border: 2px solid gray;
@@ -40,7 +43,7 @@ input{
 .mess {
     height: 100px;
     resize: vertical;
-background-color: white;
+    background-color: white;
 }
 
 
@@ -55,6 +58,21 @@ background-color: white;
 
 }
 
+.notification {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    width: max-content;
+    background-color: #fff9e6;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    color: goldenrod;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 
 @media screen and (min-width:768px) {
     .form {
