@@ -22,7 +22,7 @@ export default function Contact() {
 
     const submitform = async(e) => {
         e.preventDefault()
-        const req = await fetch('http://localhost:3000/', {
+        const req = await fetch('https://devmagnets.onrender.com', {
             method: 'POST',
             body: JSON.stringify(form),
             headers: {
