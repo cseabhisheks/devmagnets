@@ -4,7 +4,7 @@ export default function About() {
     return (<>
         <section className={style.hero_section} id='about'>
             <div className={style.hero_img}>
-                <img className={style.himg} src="./abhishek.jpg" alt="" />
+                <img className={style.himg} src="./abhishek.jpeg" alt="" />
             </div>
             <div className={style.hero_content}>
                 <h1 className='fs-h1' >Hi I'm</h1>
